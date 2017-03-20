@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Stack;
 
 /**
  * Created by Kenji on 10/19/2016.
@@ -237,5 +238,60 @@ public class Main {
         } else {
             rotateThree(a, k);
         }
+    }
+
+    public static int lengthLongestPath(String input) {
+        if(input == null || input.isEmpty()) {
+            return 0;
+        }
+
+        Stack<Integer> stack = new Stack<>();
+
+        int maxCount = 0, curCount = 0;
+        String[] words = input.split("\n");
+
+        for(String word : words) {
+            // Count the \t's to see which level we're on
+            int level = word.length() - word.replace("\t", "").length();
+
+            while(stack.size() > level) {
+                int val = stack.pop();
+                curCount -= val;
+            }
+
+            String cur = word.replace("\t", "");
+
+            if(cur.contains(".")) {
+                maxCount = Math.max(curCount + cur.length(), maxCount);
+            } else {
+                int tokenSizeWithSlash = cur.length() + 1;
+                curCount += tokenSizeWithSlash; // handle slashes
+                stack.push(tokenSizeWithSlash);
+            }
+        }
+
+        return maxCount;
+    }
+
+    public static String licenseKeyFormatting(String S, int K) {
+        String in = S.replace("-", "").toUpperCase();
+        if(K >= in.length()) {
+            return in;
+        }
+        int firstGroupSize = in.length() % K;
+
+        StringBuilder sb = new StringBuilder(in);
+
+        if(firstGroupSize > 0) {
+            sb.insert(firstGroupSize, '-');
+        }
+
+        int counter = firstGroupSize == 0 ? K : firstGroupSize + K + 1;
+        while(counter < sb.length()) {
+            sb.insert(counter, '-');
+            counter += K + 1;
+        }
+
+        return sb.toString();
     }
 }
