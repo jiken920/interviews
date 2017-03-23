@@ -8,7 +8,7 @@ public class FrequencySort {
         if(s.length() < 3)
             return s;
         int max = 0;
-        int[] map = new int[256];
+        int[] map = new int[256]; // ascii char array
         for(char ch : s.toCharArray()) {
             map[ch]++;
             max = Math.max(max,map[ch]);
@@ -24,13 +24,13 @@ public class FrequencySort {
                 }
             }
         }
-        StringBuilder strb = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
         for(int i = max; i >= 0; i--) { // iterate backwards from the highest frequency buckets to the lowest
             if(buckets[i] != null)
                 for(char ch : buckets[i].toCharArray())
                     for(int j = 0; j < i; j++)
-                        strb.append(ch);
+                        sb.append(ch);
         }
-        return strb.toString();
+        return sb.toString();
     }
 }
