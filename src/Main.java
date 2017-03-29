@@ -7,59 +7,13 @@ public class Main {
 
     }
 
-    public static void findSquareRoot(int n) {
-        System.out.println(findSquareRoot(n, 1));
-    }
 
-    private static int findSquareRoot(int n, int root) {
-        if (root * root > n) {
-            return root - 1;
-        }
-
-        return findSquareRoot(n, root + 1);
-    }
 
     public static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
         TreeNode(int x) { val = x; }
-    }
-
-    public List<Integer> inorderTraversal(TreeNode root) {
-        List<Integer> results = new ArrayList<>();
-        traverse(root, results);
-        return results;
-    }
-
-    public void traverse(TreeNode root, List<Integer> results) {
-        if(root == null) {
-            return;
-        }
-
-        Stack<TreeNode> stk = new Stack<>();
-
-        // push the left nodes first
-        TreeNode cur = root;
-        while(cur != null) {
-            stk.push(cur);
-            cur = cur.left;
-        }
-
-        while(!stk.isEmpty()) {
-            cur = stk.pop(); // pop the value and print it
-            results.add(cur.val);
-
-            if(cur.right != null) { // now push the right nodes
-                stk.push(cur.right);
-                cur = cur.right;
-
-                while(cur.left != null) { // finally, push all the left nodes in the right tree
-                    stk.push(cur.left);
-                    cur = cur.left;
-                }
-            }
-        }
     }
 
     public static void cipher() {
@@ -295,38 +249,6 @@ public class Main {
 
             System.out.println(chars);
         }
-    }
-
-    static String[] braces(String[] values) {
-        List<String> result = new ArrayList<String>(values.length);
-        for(String value : values) {
-            Stack<Character> stack = new Stack<>();
-            char[] cArray = value.toCharArray();
-            for (int i = 0; i < cArray.length; i++) {
-                if(!stack.empty()) {
-                    if (cArray[i] == '}' && stack.peek() == '{') {
-                        stack.pop();
-                        continue;
-                    }
-                    if (cArray[i] == ')' && stack.peek() == '(') {
-                        stack.pop();
-                        continue;
-                    }
-                    if (cArray[i] == ']' && stack.peek() == '[') {
-                        stack.pop();
-                        continue;
-                    }
-                }
-                stack.push(cArray[i]);
-            }
-            if(stack.empty()) {
-                result.add("YES");
-            }
-            else {
-                result.add("NO");
-            }
-        }
-        return result.toArray(new String[result.size()]);
     }
 
     static String firstRepeatedWord(String s) {
