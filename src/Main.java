@@ -7,53 +7,11 @@ public class Main {
 
     }
 
-
-
     public static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
         TreeNode(int x) { val = x; }
-    }
-
-    public static void cipher() {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        String s = in.next();
-        int k = in.nextInt();
-
-        char[] input = s.toCharArray();
-        for(int i = 0; i < n; i++) {
-            if(input[i] >= 'a' && input[i] <= 'z') {
-                // Get a zero-based index
-                int baseIndex = (int)input[i] - 'a';
-                int newIndex = baseIndex + k;
-                if (newIndex > 'z' - 'a') {
-                    baseIndex = newIndex % 26;
-                    newIndex = 'a' + baseIndex;
-                    // Replace the current letter with the rotated letter
-                    input[i] = (char)(newIndex);
-                } else {
-                    // Make sure to add 'a' back to the index to get into the right range
-                    input[i] = (char)(newIndex + 'a');
-                }
-
-            } else if(input[i] >= 'A' && input[i] <= 'Z') {
-                int baseIndex = (int)input[i] - 'A';
-                int newIndex = baseIndex + k;
-                if (newIndex > 'Z' - 'A') {
-                    baseIndex = newIndex % 26;
-                    newIndex = 'A' + baseIndex;
-                    // Replace the current letter with the rotated letter
-                    input[i] = (char)(newIndex);
-                } else {
-                    // Make sure to add 'a' back to the index to get into the right range
-                    input[i] = (char)(newIndex + 'A');
-                }
-            }
-        }
-
-        System.out.println(input);
     }
 
     public static void anagrams() {
@@ -102,28 +60,6 @@ public class Main {
             System.out.println(changes);
         }
     }
-
-    static ListNode reverseLinkedList(ListNode node) {
-        if(node == null) {
-            return null;
-        }
-        if(node.next == null) {
-            return node;
-        }
-
-        // Store a pointer to the next node
-        ListNode nextNode = node.next;
-
-        // Unlink the next node
-        node.next = null;
-
-        //cur.next = node;
-        ListNode reverse = reverseLinkedList(nextNode);
-        nextNode.next = node;
-
-        return reverse;
-    }
-
 
     static void shares() {
         Scanner sc = new Scanner(System.in);
@@ -262,100 +198,6 @@ public class Main {
         return "";
     }
 
-    static String firstNonRepeatedCharacter(String s) {
-        Map<Character, Integer> charMap = new HashMap<>(s.length());
-
-        char[] inputChars = s.toCharArray();
-        for (int i = 0; i < inputChars.length; i++) {
-            if(charMap.containsKey(inputChars[i])) {
-                int count = inputChars[i];
-                charMap.put(inputChars[i], count++);
-            }
-            else {
-                charMap.put(inputChars[i], 1);
-            }
-        }
-
-        String result = null;
-        for(Character c : charMap.keySet()) {
-            if(charMap.get(c) == 1) {
-                result = String.valueOf(c);
-                break;
-            }
-        }
-
-        return result;
-    }
-
-    static String firstNonRepeatedCharacterBruteForce(String s) {
-        char[] inputChars = s.toCharArray();
-        for (int i = 0; i < inputChars.length; i++) {
-            boolean isRepeated = false;
-            for (int j = 0; j < inputChars.length; j++) {
-                if(i == j) {
-                    continue;
-                }
-                if(inputChars[i] == inputChars[j]) {
-                    isRepeated = true;
-                    break;
-                }
-            }
-
-            if(!isRepeated) {
-                return String.valueOf(inputChars[i]);
-            }
-        }
-
-        return "";
-    }
-
-    static int[] mergeArrays(int[] a, int[] b) {
-        int mergedLength = a.length + b.length;
-        int[] mergedArray = new int[mergedLength];
-        int mergeIndex = 0, i = 0, j = 0;
-
-        while(i < a.length && j < b.length) {
-            if (a[i] <= b[j]) {
-                mergedArray[mergeIndex] = a[i];
-                i++;
-            }
-            else {
-                mergedArray[mergeIndex] = b[j];
-                j++;
-            }
-            mergeIndex++;
-        }
-
-        while(i < a.length) {
-            mergedArray[mergeIndex] = a[i];
-            mergeIndex++;
-            i++;
-        }
-        while(j < b.length) {
-            mergedArray[mergeIndex] = b[i];
-            mergeIndex++;
-            j++;
-        }
-
-        return mergedArray;
-    }
-
-    private static int isPresent(Node root, int val){
-        if(root == null) {
-            return 0;
-        }
-        if(root.data == val) {
-            return 1;
-        }
-
-        if(val < root.data) {
-            return isPresent(root.left, val);
-        }
-        else {
-            return isPresent(root.right, val);
-        }
-    }
-
     public static class ListNode {
         int data;
         ListNode next;
@@ -373,36 +215,6 @@ public class Main {
         Node(int newData) {
             left = right = null;
             data = newData;
-        }
-    }
-
-    public static boolean isBST(Node root) {
-        return isBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
-    }
-
-    private static boolean isBST(Node root, int min, int max) {
-        if(root == null) {
-            return true;
-        }
-
-        if(root.data >= min && root.data <= max &&
-                isBST(root.left, min, root.data) && isBST(root.right, root.data, max)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    private static int height(Node root) {
-        if(root == null) { return -1; }
-
-        int lefth = height(root.left);
-        int righth = height(root.right);
-
-        if (lefth > righth) {
-            return lefth + 1;
-        } else {
-            return righth + 1;
         }
     }
 
