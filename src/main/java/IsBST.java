@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by krudio on 3/29/17.
  */
@@ -17,5 +20,40 @@ public class IsBST {
         } else {
             return false;
         }
+    }
+
+    public static boolean isBSTInorder(TreeNode root) {
+        if(root == null) {
+            return true;
+        }
+
+        List<TreeNode> nodes = new ArrayList<>();
+        traverseTree(root, nodes);
+
+        if(nodes.size() == 1) {
+            return true;
+        }
+
+        int i = 0, j = 1;
+        while(j < nodes.size() - 1) {
+            if(nodes.get(i).val > nodes.get(j).val) {
+                return false;
+            }
+
+            i++;
+            j++;
+        }
+
+        return true;
+    }
+
+    public static void traverseTree(TreeNode root, List<TreeNode> nodes) {
+        if(root == null) {
+            return;
+        }
+
+        traverseTree(root.left, nodes);
+        nodes.add(root);
+        traverseTree(root.right, nodes);
     }
 }
