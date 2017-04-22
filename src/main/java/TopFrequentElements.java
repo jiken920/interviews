@@ -23,11 +23,13 @@ public class TopFrequentElements {
             }
         }
 
+        // Initialize our lists with null values
         List<List<Integer>> buckets = new ArrayList<>(nums.length + 1);
         for (int i = 0; i < nums.length + 1; i++) {
             buckets.add(null);
         }
 
+        // The indices of our lists (buckets) will represent the counts of each number
         for(int key : numbers.keySet()) {
             int count = numbers.get(key);
             List<Integer> cur = buckets.get(count);
@@ -38,6 +40,7 @@ public class TopFrequentElements {
             buckets.set(count, cur);
         }
 
+        // Iterate backwards through the lists of counts and add the first K results
         List<Integer> results = new ArrayList<>(k);
         int j = 1;
         for (int i = buckets.size() - 1; i >= 0; i--) {
