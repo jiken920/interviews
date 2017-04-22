@@ -16,7 +16,7 @@ public class FindLargestInEachTreeRow {
 
         while(!nodes.isEmpty()) {
             int rowMax = Integer.MIN_VALUE;
-            int queueSize = nodes.size();
+            int queueSize = nodes.size(); // Take a snapshot of the current queue size.
 
             // Iterate through the current set of items in the queue. This should represent a single level in the queue
             for (int i = 0; i < queueSize; i++) {

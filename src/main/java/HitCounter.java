@@ -7,14 +7,14 @@ import java.util.Map;
  * Created by krudio on 3/23/17.
  */
 public class HitCounter {
-    private Map<Integer, Integer> queue;
+    private Map<Integer, Integer> hits;
     private static final int FIVE_MINUTES_SEC = 300;
 
     /**
      * Initialize your data structure here.
      */
     public HitCounter() {
-        queue = new LinkedHashMap<>();
+        hits = new LinkedHashMap<>();
     }
 
     /**
@@ -23,10 +23,10 @@ public class HitCounter {
      * @param timestamp - The current timestamp (in seconds granularity).
      */
     public void hit(int timestamp) {
-        if (queue.containsKey(timestamp)) {
-            queue.put(timestamp, queue.get(timestamp) + 1);
+        if (hits.containsKey(timestamp)) {
+            hits.put(timestamp, hits.get(timestamp) + 1);
         } else {
-            queue.put(timestamp, 1);
+            hits.put(timestamp, 1);
         }
     }
 
@@ -36,21 +36,21 @@ public class HitCounter {
      * @param timestamp - The current timestamp (in seconds granularity).
      */
     public int getHits(int timestamp) {
-        if (queue.size() > 0) {
+        if (hits.size() > 0) {
             int totalHits = 0;
             if (timestamp <= FIVE_MINUTES_SEC) {
                 //return everything
-                for (Map.Entry<Integer, Integer> entry : queue.entrySet()) {
+                for (Map.Entry<Integer, Integer> entry : hits.entrySet()) {
                     totalHits += entry.getValue();
                 }
             } else {
                 int endTime = timestamp - FIVE_MINUTES_SEC;
-                List<Map.Entry<Integer, Integer>> list = new ArrayList<>(queue.entrySet());
+                List<Map.Entry<Integer, Integer>> list = new ArrayList<>(hits.entrySet());
 
                 for (int i = list.size() - 1; i >= 0; i--) {
                     Map.Entry<Integer, Integer> entry = list.get(i);
                     if (entry.getKey() <= endTime) {
-                        queue.remove(entry.getKey());
+                        hits.remove(entry.getKey());
                     } else {
                         totalHits += entry.getValue();
                     }
