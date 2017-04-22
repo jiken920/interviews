@@ -17,7 +17,11 @@ public class ExcelSheetColumnNumber {
     public int titleToNumber(String s) {
         int result = 0;
         for(int i = 0; i < s.length(); i++) {
-            result = result * 26 + (s.charAt(i) - 'A' + 1);
+            int charIndex = s.charAt(i) - 'A';
+
+            // Each time through the loop, take the previous result and multiply it by 26. Then, add our current char
+            // index to the result. Need to add 1 because Excel uses a 1-based counting system.
+            result = result * 26 + (charIndex + 1);
         }
         return result;
     }

@@ -17,8 +17,14 @@ public class CountBattleships {
         for (int row = 0; row < board.length; row++) {
             for (int col = 0; col < board[0].length; col++) {
                 if(board[row][col] == '.') continue;
+
+                // If there's an X above us, then we've already seen this battleship
                 if(row > 0 && board[row - 1][col] == 'X') continue;
+
+                // If there's an X to the left of us, then we've already seen this battleship
                 if(col > 0 && board[row][col - 1] == 'X') continue;
+
+                // Otherwise, we must be seeing this 'X' for the first time. Count this battleship.
                 count++;
             }
         }
