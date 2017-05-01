@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by krudio on 3/27/17.
+ * Created by jiken920 on 3/27/17.
  */
 public class MajorityElement {
     public int majorityElement(int[] nums) {

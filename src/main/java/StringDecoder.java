@@ -1,7 +1,7 @@
 import java.util.Stack;
 
 /**
- * Created by krudio on 3/21/17.
+ * Created by jiken920 on 3/21/17.
  */
 public class StringDecoder {
     public String decodeString(String s) {

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by krudio on 4/21/17.
+ * Created by jiken920 on 4/21/17.
  */
 public class Permutations {
     public List<List<Integer>> permute(int[] nums) {

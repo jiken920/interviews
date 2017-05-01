@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by krudio on 3/23/17.
+ * Created by jiken920 on 3/23/17.
  */
 public class MinAbsoluteBSTDifference {
     public int getMinimumDifference(TreeNode root) {

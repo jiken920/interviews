@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by krudio on 3/23/17.
+ * Created by jiken920 on 3/23/17.
  */
 public class HitCounter {
     private Map<Integer, Integer> hits;

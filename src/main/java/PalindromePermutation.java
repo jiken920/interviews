@@ -2,7 +2,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by krudio on 4/20/17.
+ * Created by jiken920 on 4/20/17.
  *
  * Given a string, determine if a permutation of the string could form a palindrome.
 

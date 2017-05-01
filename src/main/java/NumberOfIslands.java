@@ -1,5 +1,5 @@
 /**
- * Created by krudio on 4/18/17.
+ * Created by jiken920 on 4/18/17.
  */
 public class NumberOfIslands {
     public int numIslands(char[][] grid) {
@@ -25,12 +25,9 @@ public class NumberOfIslands {
 
         grid[row][col] = '0';
 
-        for (int i = row - 1; i <= row + 1; i++) {
-            for (int j = col - 1; j <= col + 1; j++) {
-                if(i != row && j != col) {
-                    searchNeighbors(grid, i, j);
-                }
-            }
-        }
+        searchNeighbors(grid, row + 1, col);
+        searchNeighbors(grid, row - 1, col);
+        searchNeighbors(grid, row , col + 1);
+        searchNeighbors(grid, row , col - 1);
     }
 }

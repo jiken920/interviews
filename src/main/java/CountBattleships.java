@@ -1,5 +1,5 @@
 /**
- * Created by krudio on 4/16/17.
+ * Created by jiken920 on 4/16/17.
  */
 public class CountBattleships {
 //    Given an 2D board, count how many battleships are in it. The battleships are represented with 'X's, empty slots

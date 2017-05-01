@@ -6,7 +6,7 @@ import java.util.Map;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by krudio on 3/30/17.
+ * Created by jiken920 on 3/30/17.
  */
 public class DataStructuresTest {
     @Test

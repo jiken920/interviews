@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * Created by krudio on 3/29/17.
+ * Created by jiken920 on 3/29/17.
  */
 public class Cipher {
     public static void cipher() {

@@ -1,6 +1,6 @@
 
 /**
- * Created by krudio on 4/4/17.
+ * Created by jiken920 on 4/4/17.
  */
 public class TicTacToe {
     int[] rows;

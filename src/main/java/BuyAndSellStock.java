@@ -1,5 +1,5 @@
 /**
- * Created by krudio on 4/12/17.
+ * Created by jiken920 on 4/12/17.
  */
 public class BuyAndSellStock {
     public int maxProfit(int[] prices) {

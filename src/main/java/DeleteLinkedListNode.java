@@ -1,5 +1,5 @@
 /**
- * Created by krudio on 3/27/17.
+ * Created by jiken920 on 3/27/17.
  */
 public class DeleteLinkedListNode {
     public void deleteNode(ListNode node) {

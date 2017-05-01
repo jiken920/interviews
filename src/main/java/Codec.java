@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by krudio on 4/20/17.
+ * Created by jiken920 on 4/20/17.
  */
 public class Codec {
     private static final String baseUrl = "http://tinyurl.com/";

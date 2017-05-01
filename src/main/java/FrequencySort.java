@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 /**
- * Created by krudio on 3/23/17.
+ * Created by jiken920 on 3/23/17.
  */
 public class FrequencySort {
     public String frequencySort(String s) {

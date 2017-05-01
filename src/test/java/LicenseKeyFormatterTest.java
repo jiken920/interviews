@@ -3,7 +3,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Created by krudio on 3/21/17.
+ * Created by jiken920 on 3/21/17.
  */
 public class LicenseKeyFormatterTest {
     @Test

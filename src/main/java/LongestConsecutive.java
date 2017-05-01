@@ -19,13 +19,6 @@ public class LongestConsecutive {
         longestConsecutive(root.left, root.val + 1, cur);
         longestConsecutive(root.right, root.val + 1, cur);
     }
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode(int x) { val = x; }
-    }
 }
 
 

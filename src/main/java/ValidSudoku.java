@@ -2,7 +2,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by krudio on 4/21/17.
+ * Created by jiken920 on 4/21/17.
  */
 public class ValidSudoku {
     public boolean isValidSudoku(char[][] board) {

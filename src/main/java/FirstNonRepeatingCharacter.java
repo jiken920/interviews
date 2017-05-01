@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by krudio on 3/29/17.
+ * Created by jiken920 on 3/29/17.
  */
 public class FirstNonRepeatingCharacter {
     static String firstNonRepeatedCharacter(String s) {

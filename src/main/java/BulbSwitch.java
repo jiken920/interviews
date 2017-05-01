@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 /**
- * Created by krudio on 4/21/17.
+ * Created by jiken920 on 4/21/17.
  *
  * There are n bulbs that are initially off. You first turn on all the bulbs. Then, you turn off every second bulb.
  * On the third round, you toggle every third bulb (turning on if it's off or turning off if it's on).

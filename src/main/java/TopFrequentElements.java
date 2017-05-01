@@ -1,7 +1,7 @@
 import java.util.*;
 
 /**
- * Created by krudio on 4/21/17.
+ * Created by jiken920 on 4/21/17.
  *
  * Given a non-empty array of integers, return the k most frequent elements.
  * 

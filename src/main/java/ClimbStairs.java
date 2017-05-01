@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 /**
- * Created by krudio on 3/29/17.
+ * Created by jiken920 on 3/29/17.
  */
 public class ClimbStairs {
     //    You are climbing a stair case. It takes n steps to reach to the top.

@@ -1,5 +1,5 @@
 /**
- * Created by krudio on 4/20/17.
+ * Created by jiken920 on 4/20/17.
  */
 public class LowestCommonAncestorBST {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {

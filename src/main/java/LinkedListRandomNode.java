@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * Created by krudio on 3/24/17.
+ * Created by jiken920 on 3/24/17.
  */
 public class LinkedListRandomNode {
     private ListNode head;

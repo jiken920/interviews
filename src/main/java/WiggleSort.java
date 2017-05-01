@@ -1,5 +1,5 @@
 /**
- * Created by krudio on 3/22/17.
+ * Created by jiken920 on 3/22/17.
  */
 public class WiggleSort {
     public void wiggleSort(int[] nums) {

@@ -1,5 +1,5 @@
 /**
- * Created by krudio on 3/29/17.
+ * Created by jiken920 on 3/29/17.
  */
 public class MergeArrays {
     static int[] mergeArrays(int[] a, int[] b) {

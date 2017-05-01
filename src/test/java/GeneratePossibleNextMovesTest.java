@@ -6,7 +6,7 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 /**
- * Created by krudio on 3/23/17.
+ * Created by jiken920 on 3/23/17.
  */
 public class GeneratePossibleNextMovesTest {
     @Test

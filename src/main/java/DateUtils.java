@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.Locale;
 
 /**
- * Created by krudio on 3/16/17.
+ * Created by jiken920 on 3/16/17.
  */
 public class DateUtils {
     private static final SimpleDateFormat MONTH_INPUT_FORMAT = new SimpleDateFormat("MMMM");

@@ -1,7 +1,7 @@
 import java.util.*;
 
 /**
- * Created by krudio on 4/16/17.
+ * Created by jiken920 on 4/16/17.
  *
  * Given a List of words, return the words that can be typed using letters of alphabet on only one row of an
  * American keyboard

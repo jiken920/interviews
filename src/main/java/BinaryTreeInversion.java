@@ -2,7 +2,7 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 
 /**
- * Created by krudio on 3/29/17.
+ * Created by jiken920 on 3/29/17.
  */
 public class BinaryTreeInversion {
     public TreeNode invertTree(TreeNode root) {
