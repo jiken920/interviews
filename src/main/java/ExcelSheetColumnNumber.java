@@ -5,13 +5,9 @@
 
      For example:
 
-     1 -> A
-     2 -> B
-     3 -> C
-     ...
-     26 -> Z
-     27 -> AA
-     28 -> AB
+     A -> 1
+     AA -> 27
+     BA -> 53
  */
 public class ExcelSheetColumnNumber {
     public int titleToNumber(String s) {
